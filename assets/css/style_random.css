@@ -1,0 +1,15 @@
+#randomDigimon {
+    text-align: center;
+  }
+
+#digimonImageContainer {
+    text-align: center;
+  }
+  #digimonImage {
+    max-width: 300px;
+    max-height: 300px;
+    cursor: pointer;
+  }
+  #digimonName {
+    margin-top: 10px;
+  }

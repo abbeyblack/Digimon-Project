@@ -9,9 +9,11 @@
     <title>Digimon</title>
 </head>
 <body>
-    <div class="navbar-container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Digimon</a>
+  
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary bg-body-tertiary">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" alt="logo" width="30" height="24">
+          </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,13 +21,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="./random.html">Digimon Random</a>
             </li>
       </nav>
-    </div>
+
 <div id="alone-digimon">
       <h1>¿Cuál es tu Digimon Preferido?</h1>
       <label for="digimon-select">Nombre del Digimon:</label>
@@ -40,7 +42,7 @@
         <h1>Lista de todos los Digimon</h1>
     <table id="digimon-list" class="table">
         <thead>
-          <tr class="table-dark">
+          <tr class="table-light">
             <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Nivel</th>

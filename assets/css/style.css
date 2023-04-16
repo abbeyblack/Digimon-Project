@@ -1,17 +1,10 @@
-.backgorud {
-    background-image: var(--bs-gradient);
-}
 
 .container {
     padding-top: 10%;
     text-align: center;
+    color: rgb(194, 40, 130);;
 }
 
-.navbar-containe {
-    margin: auto;
-    width: 100%;
-    max-width: 960px; 
-  }
 #digimon-list {
     margin-left: auto;
     margin-right: auto;
@@ -27,7 +20,7 @@
   #digimon-list th,
   #digimon-list td {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid  rgb(194, 40, 130);
     text-align: center;
   }
   
@@ -43,7 +36,11 @@
   }
   #alone-digimon h1 {
     margin-top: 10%;
+    color: rgb(194, 40, 130);
   }
   #digimon-details {
     margin-top: 10%;
+  }
+  h3{
+    color: rgb(194, 40, 130);
   }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style_random.css">
+    <title>Digimon Random</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" alt="logo" width="30" height="24">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./random.html">Digimon Random</a>
+            </li>
+      </nav>
+
+    
+      <body onload="getRandomDigimon()">
+        <div id="randomDigimon">
+        <h3>Random Digimon</h3>
+        <div id="digimonImageContainer">
+            <h1 id="digimonName"></h1>
+          <img id="digimonImage" src="" alt="Random Digimon" onclick="showDigimonName()"> 
+        
+        </div>
+
+        <a class="btn btn-primary" href="./random.html" role="button">Genera otro Digimon</a>
+    </div>
+        <script src="./assets/js/logica_random.js"></script>
+        
+ </body>
+</html>
+
