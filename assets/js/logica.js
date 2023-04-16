@@ -1,32 +1,59 @@
-// Make a GET request to the Digimon API
+
 fetch("https://digimon-api.vercel.app/api/digimon")
-  .then(response => response.json()) // Convert the response to JSON
+  .then(response => response.json()) 
   .then(data => {
-    // Extract the list of Digimon
-    const digimonList = data.data;
+    tabla(data)
 
-    // Loop through each Digimon and create a list element for them
-    digimonList.forEach(digimon => {
-      // Create a list item element
-      const listItem = document.createElement("li");
+    function tabla(data) {
+        contenido.innerHTML = ""
 
-      // Create an image element
-      const image = document.createElement("img");
-      image.src = digimon.img; // Set the image source to the Digimon's image URL
-      listItem.appendChild(image); // Append the image to the list item
+        // Use map() function to generate row numbers starting from 1
+        data.map((temp, index) => {
+            contenido.innerHTML +=
+        
+            `
+            
+        <tr>
+        <th scope="row">${index + 1}</th>
+        <th scope="col">${temp.name}</th>
+        <th scope="col">${temp.level}</th>
+        <th scope="col"><img src="${temp.img}" alt="${temp.name}"></th>
+        </tr>
+            
+            `
 
-      // Create a span element for the Digimon's name
-      const name = document.createElement("span");
-      name.textContent = `Name: ${digimon.name}`; // Set the text content to the Digimon's name
-      listItem.appendChild(name); // Append the name span to the list item
+                  
+        })
+    }
+})
 
-      // Create a span element for the Digimon's level
-      const level = document.createElement("span");
-      level.textContent = `Level: ${digimon.level}`; // Set the text content to the Digimon's level
-      listItem.appendChild(level); // Append the level span to the list item
+// scripts.js
 
-      // Append the list item to the list
-      document.getElementById("digimon-list").appendChild(listItem);
+// Fetch Digimon data from the API
+fetch("https://digimon-api.vercel.app/api/digimon")
+  .then(response => response.json()) 
+  .then(data => {
+    // Get the select element and populate it with options
+    const select = document.getElementById("digimon-select");
+    data.forEach(digimon => {
+      const option = document.createElement("option");
+      option.value = digimon.name;
+      option.textContent = digimon.name;
+      select.appendChild(option);
+    });
+
+    // Add event listener for select change
+    select.addEventListener("change", (event) => {
+      const selectedDigimonName = event.target.value;
+      const selectedDigimon = data.find(digimon => digimon.name === selectedDigimonName);
+      const digimonDetails = document.getElementById("digimon-details");
+
+      // Display the selected Digimon details
+      digimonDetails.innerHTML = `
+        <h2>${selectedDigimon.name}</h2>
+        <p>Level: ${selectedDigimon.level}</p>
+        <img src="${selectedDigimon.img}" alt="${selectedDigimon.name} Image">
+      `;
     });
   })
-  .catch(error => console.error(error)); // Handle any errors that occur during the fetch request
+  .catch(error => console.error(error));

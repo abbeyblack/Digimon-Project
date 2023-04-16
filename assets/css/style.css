@@ -1,0 +1,43 @@
+
+.container {
+    padding-top: 10%;
+}
+
+/* Center the table horizontally */
+#digimon-list {
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+  }
+  
+  /* Limit the width of the table */
+  #digimon-list table {
+    max-width: 400px; /* You can adjust this value to your desired width */
+    width: 50%;
+    margin: 50% auto;
+  }
+  
+  /* Add some padding and spacing to the table cells */
+  #digimon-list th,
+  #digimon-list td {
+    padding: 10px;
+  }
+  
+  /* Add some borders to the table cells */
+  #digimon-list th,
+  #digimon-list td {
+    border: 1px solid #ccc;
+  }
+  
+  /* Center the text in the table cells */
+  #digimon-list th,
+  #digimon-list td {
+    text-align: center;
+  }
+  
+  #digimon-list img {
+    max-width: 100px; /* Adjust the max-width value to your desired thumbnail size */
+    max-height: 100px; /* Adjust the max-height value to your desired thumbnail size */
+    object-fit: cover;
+    object-position: center;
+  }
