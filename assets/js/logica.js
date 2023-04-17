@@ -1,3 +1,16 @@
+$(document).ready(function(){
+  $("h1").on({
+    mouseenter: function(){
+      $(this).css("background-color", "#fdcae1");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "#ff6961");
+    }, 
+    click: function(){
+      $(this).css("background-color", "#84b6f4");
+    }  
+  });
+});
 
 fetch("https://digimon-api.vercel.app/api/digimon")
   .then(response => response.json()) 
@@ -7,7 +20,7 @@ fetch("https://digimon-api.vercel.app/api/digimon")
     function tabla(data) {
         contenido.innerHTML = ""
 
-        // Use map() function to generate row numbers starting from 1
+        
         data.map((temp, index) => {
             contenido.innerHTML +=
         
@@ -27,13 +40,11 @@ fetch("https://digimon-api.vercel.app/api/digimon")
     }
 })
 
-// scripts.js
 
-// Fetch Digimon data from the API
 fetch("https://digimon-api.vercel.app/api/digimon")
   .then(response => response.json()) 
   .then(data => {
-    // Get the select element and populate it with options
+    
     const select = document.getElementById("digimon-select");
     data.forEach(digimon => {
       const option = document.createElement("option");
@@ -42,18 +53,18 @@ fetch("https://digimon-api.vercel.app/api/digimon")
       select.appendChild(option);
     });
 
-    // Add event listener for select change
     select.addEventListener("change", (event) => {
       const selectedDigimonName = event.target.value;
       const selectedDigimon = data.find(digimon => digimon.name === selectedDigimonName);
       const digimonDetails = document.getElementById("digimon-details");
 
-      // Display the selected Digimon details
       digimonDetails.innerHTML = `
         <h2>${selectedDigimon.name}</h2>
         <p>Level: ${selectedDigimon.level}</p>
         <img src="${selectedDigimon.img}" alt="${selectedDigimon.name} Image">
       `;
     });
+
   })
   .catch(error => console.error(error));
+

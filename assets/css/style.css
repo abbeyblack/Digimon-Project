@@ -1,19 +1,5 @@
-
-@media screen and (min-width:992px){
-    .nav-item {
-    line-height:80px;
-    }
-  }
-
-.fondo {
-    background-image: url(/assets/img/logo.png);
-    background-color: aquamarine;
-}
-
-#backie {
-    background-image: url(/assets/img/logo.png);
-    background-color: aquamarine;
-   
+body {
+  font-family: 'Oswald', sans-serif !important;
 }
 
 .container {
