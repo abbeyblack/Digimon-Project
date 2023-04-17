@@ -25,12 +25,3 @@
           });
       }
   
-      function showDigimonName() {
-        // Show/hide the name of the Digimon when the image is clicked
-        const digimonNameElement = document.getElementById("digimonName");
-        if (digimonNameElement.style.display === "block") {
-          digimonNameElement.style.display = "none";
-        } else {
-          digimonNameElement.style.display = "block";
-        }
-      }

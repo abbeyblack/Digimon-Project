@@ -1,3 +1,13 @@
+h1, h3 {
+color:rgb(194, 40, 130);
+}
+
+/*.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }*/
 #randomDigimon {
     text-align: center;
   }
@@ -13,3 +23,8 @@
   #digimonName {
     margin-top: 10px;
   }
+
+#button {
+    margin-top: 2%;
+}
+
