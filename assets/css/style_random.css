@@ -1,47 +1,48 @@
 body {
-  font-family: 'Oswald', sans-serif !important;
+  font-family: "Oswald", sans-serif !important;
 }
 
-h1, h3 {
-color:rgb(194, 40, 130);
-margin-top: 2%;
+h1,
+h3 {
+  color: rgb(194, 40, 130);
+  margin-top: 2%;
 }
 
 #randomDigimon {
-    text-align: center;
-  }
+  text-align: center;
+}
 
 #digimonImageContainer {
-    text-align: center;
-  }
-  #digimonImage {
-    max-width: 300px;
-    max-height: 300px;
-    cursor: pointer;
-  }
-  #digimonName {
-    margin-top: 10px;
-  }
+  text-align: center;
+}
+#digimonImage {
+  max-width: 300px;
+  max-height: 300px;
+  cursor: pointer;
+}
+#digimonName {
+  margin-top: 10px;
+}
 
 #button {
-    margin-top: 2%;
+  margin-top: 2%;
 }
 
 @media (max-width: 767px) {
-    #digimonImageContainer {
-        text-align: center;
-    }
+  #digimonImageContainer {
+    text-align: center;
+  }
 
-    #digimonName {
-        font-size: 24px;
-    }
+  #digimonName {
+    font-size: 24px;
+  }
 
-    #digimonImage {
-        height: 200px;
-        width: 200px;
-    }
+  #digimonImage {
+    height: 200px;
+    width: 200px;
+  }
 
-    #button {
-        margin-top: 20px;
-    }
+  #button {
+    margin-top: 20px;
+  }
 }

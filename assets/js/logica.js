@@ -1,30 +1,27 @@
-$(document).ready(function(){
+$(document).ready(function () {
   $("h1").on({
-    mouseenter: function(){
+    mouseenter: function () {
       $(this).css("background-color", "#fdcae1");
-    },  
-    mouseleave: function(){
+    },
+    mouseleave: function () {
       $(this).css("background-color", "#ff6961");
-    }, 
-    click: function(){
+    },
+    click: function () {
       $(this).css("background-color", "#84b6f4");
-    }  
+    },
   });
 });
 
 fetch("https://digimon-api.vercel.app/api/digimon")
-  .then(response => response.json()) 
-  .then(data => {
-    tabla(data)
+  .then((response) => response.json())
+  .then((data) => {
+    tabla(data);
 
     function tabla(data) {
-        contenido.innerHTML = ""
+      contenido.innerHTML = "";
 
-        
-        data.map((temp, index) => {
-            contenido.innerHTML +=
-        
-            `
+      data.map((temp, index) => {
+        contenido.innerHTML += `
             
         <tr>
         <th scope="row">${index + 1}</th>
@@ -33,20 +30,16 @@ fetch("https://digimon-api.vercel.app/api/digimon")
         <th scope="col"><img src="${temp.img}" alt="${temp.name}"></th>
         </tr>
             
-            `
-
-                  
-        })
+            `;
+      });
     }
-})
-
+  });
 
 fetch("https://digimon-api.vercel.app/api/digimon")
-  .then(response => response.json()) 
-  .then(data => {
-    
+  .then((response) => response.json())
+  .then((data) => {
     const select = document.getElementById("digimon-select");
-    data.forEach(digimon => {
+    data.forEach((digimon) => {
       const option = document.createElement("option");
       option.value = digimon.name;
       option.textContent = digimon.name;
@@ -55,7 +48,9 @@ fetch("https://digimon-api.vercel.app/api/digimon")
 
     select.addEventListener("change", (event) => {
       const selectedDigimonName = event.target.value;
-      const selectedDigimon = data.find(digimon => digimon.name === selectedDigimonName);
+      const selectedDigimon = data.find(
+        (digimon) => digimon.name === selectedDigimonName
+      );
       const digimonDetails = document.getElementById("digimon-details");
 
       digimonDetails.innerHTML = `
@@ -64,7 +59,5 @@ fetch("https://digimon-api.vercel.app/api/digimon")
         <img src="${selectedDigimon.img}" alt="${selectedDigimon.name} Image">
       `;
     });
-
   })
-  .catch(error => console.error(error));
-
+  .catch((error) => console.error(error));
