@@ -21,3 +21,12 @@ function getRandomDigimon() {
       console.error("Error fetching digimon data:", error);
     });
 }
+// $("#digimonImage").click(function(){
+//  $(this).hide();
+//});
+
+$(document).ready(function(){
+  $("#digimonImage").click(function(){
+    $("p").append(" <b>¡Si! Este es tu Digimon Favorito</b>.");
+  });
+})
