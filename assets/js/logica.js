@@ -27,12 +27,13 @@ fetch("https://digimon-api.vercel.app/api/digimon")
         <th scope="row">${index + 1}</th>
         <th scope="col">${temp.name}</th>
         <th scope="col">${temp.level}</th>
-        <th scope="col"><img src="${temp.img}" alt="${temp.name}"></th>
+        <th scope="col"><img src="${temp.img}" alt="${temp.name}" class="zoomable"></th>
         </tr>
             
             `;
       });
     }
+    
   });
 
 fetch("https://digimon-api.vercel.app/api/digimon")
@@ -61,3 +62,4 @@ fetch("https://digimon-api.vercel.app/api/digimon")
     });
   })
   .catch((error) => console.error(error));
+

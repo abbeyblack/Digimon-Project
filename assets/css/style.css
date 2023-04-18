@@ -1,59 +1,67 @@
 body {
-  font-family: 'Oswald', sans-serif !important;
+  font-family: "Oswald", sans-serif !important;
 }
 
 .container {
-    padding-top: 10%;
-    text-align: center;
-    color: rgb(194, 40, 130);;
-    width: 100%;
-    overflow: auto;
+  padding-top: 10%;
+  text-align: center;
+  color: rgb(194, 40, 130);
+  width: 100%;
+  overflow: auto;
 }
 
 #digimon-list {
-    margin-left: auto;
-    margin-right: auto;
-    padding: auto;
-  }
-  
-  #digimon-list table {
-    max-width: 400px; 
-    width: 50%;
-    margin: 50% auto;
-  }
-  
-  #digimon-list th,
-  #digimon-list td {
-    padding: 10px;
-    border: 1px solid  rgb(194, 40, 130);
-    text-align: center;
-  }
-  
-  #digimon-list img {
-    max-width: 100px; 
-    max-height: 100px; 
-    object-fit: cover;
-    object-position: center;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto;
+}
 
-  #alone-digimon {
-    text-align: center;
-  }
-  #alone-digimon h1 {
-    margin-top: 10%;
-    color: rgb(194, 40, 130);
-  }
-  #digimon-details {
-    margin-top: 10%;
-  }
-  h3{
-    color: rgb(194, 40, 130);
-  }
-  #digimon-select {
-    margin-top: 2%;
-  }
-  #sin-favorito {
-    margin-top: 10%;
-    color: rgb(194, 40, 130);
-    text-align: center;
-  }
+#digimon-list table {
+  max-width: 400px;
+  width: 50%;
+  margin: 50% auto;
+}
+
+#digimon-list th,
+#digimon-list td {
+  padding: 10px;
+  border: 1px solid rgb(194, 40, 130);
+  text-align: center;
+}
+
+#digimon-list img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#alone-digimon {
+  text-align: center;
+}
+#alone-digimon h1 {
+  margin-top: 10%;
+  color: rgb(194, 40, 130);
+}
+#digimon-details {
+  margin-top: 10%;
+}
+h3 {
+  color: rgb(194, 40, 130);
+}
+#digimon-select {
+  margin-top: 2%;
+}
+#sin-favorito {
+  margin-top: 10%;
+  color: rgb(194, 40, 130);
+  text-align: center;
+}
+
+.zoomable {
+  transition: transform 0.2s; 
+}
+
+.zoomable:hover {
+  transform: scale(1.5); 
+}
