@@ -6,6 +6,8 @@ body {
     padding-top: 10%;
     text-align: center;
     color: rgb(194, 40, 130);;
+    width: 100%;
+    overflow: auto;
 }
 
 #digimon-list {
@@ -46,4 +48,12 @@ body {
   }
   h3{
     color: rgb(194, 40, 130);
+  }
+  #digimon-select {
+    margin-top: 2%;
+  }
+  #sin-favorito {
+    margin-top: 10%;
+    color: rgb(194, 40, 130);
+    text-align: center;
   }
